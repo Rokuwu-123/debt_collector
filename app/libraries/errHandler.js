@@ -1,5 +1,5 @@
 import fs from "fs"
-import { responLog } from "../models/historis_models.js"
+import { responLog } from "../model/historis_models.js"
 const file_name = `./err/ERR_${new Date().toISOString().substring(0, 10).replace(/-/g, '')}.txt`
 
 export default async (respon, error, requestID) => {

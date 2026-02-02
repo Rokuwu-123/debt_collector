@@ -3,6 +3,7 @@ import http from 'http'
 import rateLimit from 'express-rate-limit'
 
 import auth from './app/auth/auth.js'
+import users from './app/routes/users.js'
 
 const app = express()
 app.disable("x-powered-by")
@@ -27,10 +28,11 @@ app.set(express.json())
 
 app.use(limiter);
 
-app.use(auth)
 app.get("/", (req, res) => {
   res.render("index", {});
 });
+app.use(auth)
+app.use(users)
 
 const server_http = http.createServer(app);
 server_http.listen(port, host, () => {

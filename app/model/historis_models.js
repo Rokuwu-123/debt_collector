@@ -10,11 +10,12 @@ function getIPv4(remoteAddress) {
 
 export const requestLog = async (request) => {
   let returnData
+console.log(request)
 
   await prismaDB.$transaction(async (tx)=>{
     const data = await tx.log_request.create({
       data : {
-        ip_address : getIPv4(request.socket.remoteAddress),
+        // ip_address : getIPv4(request.socket.remoteAddress),
         url : request.url,
         base_url : request.path,
         method : request.method,
@@ -33,6 +34,19 @@ export const requestLog = async (request) => {
 
 export const responLog = async (respon, status, payload, requestID) => {
   
+  await prismaDB.$transaction(async (tx)=>{
+    await tx.log_request.update({
+      where : {
+        request_id : requestID
+      },
+      data : {
+        status : status,
+        body_resopon : payload,
+        date_respon : new Date()
+      }
+    })
+  })
+
   respon
     .status(status)
     .setHeader("Access-Control-Allow-Origin", "*")

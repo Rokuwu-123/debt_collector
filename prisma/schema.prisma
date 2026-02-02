@@ -1,5 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["views"]
 }
 
 datasource db {
@@ -51,7 +52,7 @@ model log_request {
   date_request DateTime? @default(now()) @db.Timestamp(6)
   date_respon  DateTime? @db.Timestamp(6)
   status       Int?      @default(0)
-  body_resopon Json?     @default("{}") @db.Json
+  body_respon  Json?     @default("{}") @db.Json
 }
 
 model token {
@@ -79,4 +80,18 @@ model version {
   keterangan  String?   @default("") @db.VarChar(100)
   update_date DateTime? @default(now()) @db.Timestamp(6)
   valid       Boolean?  @default(true)
+}
+
+view log {
+  request_id   Int?
+  ip_address   String?   @db.VarChar(100)
+  base_url     String?
+  method       String?   @db.VarChar(10)
+  noref        String?
+  body_request Json?     @db.Json
+  date_request DateTime? @db.Timestamp(6)
+  status       Int?
+  body_respon  Json?     @db.Json
+  date_respon  DateTime? @db.Timestamp(6)
+  username     String?
 }
