@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model bayar {
+  bayar_id    Int       @id @default(autoincrement())
+  rekening    String?   @default("") @db.VarChar(20)
+  pokok       Decimal?  @default(0) @db.Decimal(16, 2)
+  bunga       Decimal?  @default(0) @db.Decimal(16, 2)
+  denda       Decimal?  @default(0) @db.Decimal(16, 2)
+  tanggal     DateTime? @db.Timestamp(6)
+  user_insert Int?      @default(0)
+}
+
+model divisi {
+  divisi_id  Int     @id @default(autoincrement())
+  keterangan String? @default("") @db.VarChar(100)
+}
+
+model jadwal {
+  jadwal_id Int       @id @default(autoincrement())
+  rekening  String?   @default("") @db.VarChar(20)
+  tanggal   DateTime? @db.Date
+  pokok     Decimal?  @default(0) @db.Decimal(16, 2)
+  bunga     Decimal?  @default(0) @db.Decimal(16, 2)
+}
+
+model kredit {
+  kredit_id  Int       @id @default(autoincrement())
+  rekening   String?   @default("") @db.VarChar(20)
+  nama       String?   @default("") @db.VarChar(100)
+  nilai      Decimal?  @default(0) @db.Decimal(16, 2)
+  bunga      Decimal?  @default(0) @db.Decimal(16, 2)
+  tgl_pinjam DateTime? @db.Date
+  lama       Int?      @default(0)
+  tgl_tempo  DateTime? @db.Date
+}
+
+model log_request {
+  request_id   Int       @id @default(autoincrement())
+  ip_address   String?   @default("") @db.VarChar(100)
+  url          String?   @default("")
+  base_url     String?   @default("")
+  method       String?   @default("") @db.VarChar(10)
+  headers      Json?     @default("{}") @db.Json
+  body_request Json?     @default("{}") @db.Json
+  date_request DateTime? @default(now()) @db.Timestamp(6)
+  date_respon  DateTime? @db.Timestamp(6)
+  status       Int?      @default(0)
+  body_resopon Json?     @default("{}") @db.Json
+}
+
+model token {
+  token_id    Int       @id @default(autoincrement())
+  token       String?   @default("")
+  user_id     Int?      @default(0)
+  login_date  DateTime? @default(now()) @db.Timestamp(6)
+  valid_until DateTime? @default(dbgenerated("(now() + '05:00:00'::interval)")) @db.Timestamp(6)
+}
+
+model users {
+  users_id    Int       @id @default(autoincrement())
+  username    String?   @default("") @db.VarChar(10)
+  nama        String?   @default("") @db.VarChar(100)
+  password    String?   @default("")
+  blokir      Boolean?  @default(false)
+  divisi_id   Int?      @default(0)
+  user_create Int?      @default(0)
+  create_date DateTime? @default(now()) @db.Timestamp(6)
+}
+
+model version {
+  version_id  Int       @id @default(autoincrement())
+  version     String?   @default("")
+  keterangan  String?   @default("") @db.VarChar(100)
+  update_date DateTime? @default(now()) @db.Timestamp(6)
+  valid       Boolean?  @default(true)
+}
