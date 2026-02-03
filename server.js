@@ -24,7 +24,7 @@ const limiter = rateLimit({
 
 app.set("views", "app/views");
 app.set("view engine", "ejs");
-app.set(express.json())
+app.use(express.json())
 
 app.use(limiter);
 

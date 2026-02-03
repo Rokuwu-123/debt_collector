@@ -6,7 +6,12 @@ import { loginModels } from "../model/users.js"
 export const login = async(req,res)=>{
     try {
         
-        const data = decrypt(req.body.data,req.headers['x-reference'])
+        const data = req.body
+
+        if (!data.username || !data.password) throw {
+            statusCode : "03",
+            message : "Error payload format"
+        }
         
         let dataLogin = await loginModels(data)
         const payload = {
@@ -18,7 +23,7 @@ export const login = async(req,res)=>{
                 validUntil : dataLogin.valid_until
             }
         }
-        await responLog(res,200,await encrypt(payload),req.requestID)
+        await responLog(res,200,payload,req.requestID)
 
 
     } catch (error) {

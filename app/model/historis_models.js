@@ -10,12 +10,12 @@ function getIPv4(remoteAddress) {
 
 export const requestLog = async (request) => {
   let returnData
-console.log(request)
+
 
   await prismaDB.$transaction(async (tx)=>{
     const data = await tx.log_request.create({
       data : {
-        // ip_address : getIPv4(request.socket.remoteAddress),
+        ip_address : getIPv4(request.socket.remoteAddress),
         url : request.url,
         base_url : request.path,
         method : request.method,
@@ -41,7 +41,7 @@ export const responLog = async (respon, status, payload, requestID) => {
       },
       data : {
         status : status,
-        body_resopon : payload,
+        body_respon : payload,
         date_respon : new Date()
       }
     })

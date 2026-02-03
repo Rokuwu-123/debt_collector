@@ -1,0 +1,63 @@
+2-3-2026, 10:02:36 AM : (500) [Cannot read properties of undefined (reading 'username')] pada backend \controller\users.js baris 11
+2-3-2026, 10:03:06 AM : (500) [data and hash arguments required] pada backend \undefined\at Object.compare (E baris 204
+2-3-2026, 10:03:59 AM : (500) [data and hash arguments required] pada backend \undefined\at Object.compare (E baris 204
+2-3-2026, 10:05:35 AM : (500) [data and hash arguments required] pada backend \undefined\at Object.compare (E baris 204
+2-3-2026, 10:08:27 AM : (500) [data and hash arguments required] pada backend \undefined\at Object.compare (E baris 204
+2-3-2026, 10:09:18 AM : (500) [
+Invalid `prisma.users.findUnique()` invocation:
+
+{
+  where: {
+    username: "admin",
+?   users_id?: Int,
+?   AND?: usersWhereInput | usersWhereInput[],
+?   OR?: usersWhereInput[],
+?   NOT?: usersWhereInput | usersWhereInput[],
+?   nama?: StringNullableFilter | String | Null,
+?   password?: StringNullableFilter | String | Null,
+?   blokir?: BoolNullableFilter | Boolean | Null,
+?   divisi_id?: IntNullableFilter | Int | Null,
+?   user_create?: IntNullableFilter | Int | Null,
+?   create_date?: DateTimeNullableFilter | DateTime | Null
+  },
+  select: {
+    nama: true,
+    password: true,
+    users_id: true
+  }
+}
+
+Argument `where` of type usersWhereUniqueInput needs at least one of `users_id` arguments. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.users.findUnique()` invocation baris Invalid `prisma.users.findUnique()` invocation
+2-3-2026, 10:10:08 AM : (500) [
+Invalid `prisma.users.findUnique()` invocation:
+
+{
+  where: {
+    username: "admin",
+?   users_id?: Int,
+?   AND?: usersWhereInput | usersWhereInput[],
+?   OR?: usersWhereInput[],
+?   NOT?: usersWhereInput | usersWhereInput[],
+?   nama?: StringNullableFilter | String | Null,
+?   password?: StringNullableFilter | String | Null,
+?   blokir?: BoolNullableFilter | Boolean | Null,
+?   divisi_id?: IntNullableFilter | Int | Null,
+?   user_create?: IntNullableFilter | Int | Null,
+?   create_date?: DateTimeNullableFilter | DateTime | Null
+  }
+}
+
+Argument `where` of type usersWhereUniqueInput needs at least one of `users_id` arguments. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.users.findUnique()` invocation baris Invalid `prisma.users.findUnique()` invocation
+2-3-2026, 10:11:46 AM : (500) [data and hash arguments required] pada backend \undefined\at Object.compare (E baris 204
+2-3-2026, 10:12:42 AM : (500) User atau password salah
+2-3-2026, 10:13:36 AM : (500) User atau password salah
+2-3-2026, 10:14:37 AM : (500) User atau password salah
+2-3-2026, 10:15:11 AM : (500) User atau password salah
+2-3-2026, 10:20:25 AM : (500) User atau password salah
+2-3-2026, 10:20:59 AM : (500) User atau password salah
+2-3-2026, 10:23:49 AM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42P18`. Message: `tidak dapat menentukan tipe data dari parameter $1`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-3-2026, 10:29:59 AM : (500) [Cannot read properties of undefined (reading 'valid_until')] pada backend \model\users.js baris 40
