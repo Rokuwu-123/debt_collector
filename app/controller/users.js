@@ -9,6 +9,7 @@ export const login = async(req,res)=>{
         const data = req.body
 
         if (!data.username || !data.password) throw {
+            status : 400,
             statusCode : "03",
             message : "Error payload format"
         }

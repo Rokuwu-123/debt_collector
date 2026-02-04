@@ -46,8 +46,8 @@ export default async (respon, error, requestID) => {
                 .status(sendStatus)
                 .setHeader("Access-Control-Allow-Origin", "*")
                 .send({
-                    responseCode: '05',
-                    description: message
+                    statusCode: '08',
+                    message: message
                 })
         }
 
@@ -57,8 +57,8 @@ export default async (respon, error, requestID) => {
             .status(500)
             .setHeader("Access-Control-Allow-Origin", "*")
             .send({
-                "responseCode": '05',
-                "description": `Internal server error (${error.message})`
+                "statusCode": '08',
+                "message": `Internal server error (${error.message})`
             })
     }
 }

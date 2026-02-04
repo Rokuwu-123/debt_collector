@@ -1,0 +1,280 @@
+2-4-2026, 10:12:22 AM : (500) [prismaDB.$transactiona is not a function] pada backend \model\debitur.js baris 5
+2-4-2026, 10:13:00 AM : (500) [
+Invalid `prisma.kredit.findUnique()` invocation:
+
+{
+  where: {
+    account: "0101000000000012345",
+    ~~~~~~~
+?   kredit_id?: Int,
+?   AND?: kreditWhereInput | kreditWhereInput[],
+?   OR?: kreditWhereInput[],
+?   NOT?: kreditWhereInput | kreditWhereInput[],
+?   rekening?: StringNullableFilter | String | Null,
+?   nama?: StringNullableFilter | String | Null,
+?   nilai?: DecimalNullableFilter | Decimal | Null,
+?   bunga?: DecimalNullableFilter | Decimal | Null,
+?   tgl_pinjam?: DateTimeNullableFilter | DateTime | Null,
+?   lama?: IntNullableFilter | Int | Null,
+?   tgl_tempo?: DateTimeNullableFilter | DateTime | Null
+  }
+}
+
+Unknown argument `account`. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.kredit.findUnique()` invocation baris Invalid `prisma.kredit.findUnique()` invocation
+2-4-2026, 10:14:06 AM : (500) [
+Invalid `prisma.kredit.findUnique()` invocation:
+
+{
+  where: {
+    account: "0101000000000012345",
+    ~~~~~~~
+?   kredit_id?: Int,
+?   AND?: kreditWhereInput | kreditWhereInput[],
+?   OR?: kreditWhereInput[],
+?   NOT?: kreditWhereInput | kreditWhereInput[],
+?   rekening?: StringNullableFilter | String | Null,
+?   nama?: StringNullableFilter | String | Null,
+?   nilai?: DecimalNullableFilter | Decimal | Null,
+?   bunga?: DecimalNullableFilter | Decimal | Null,
+?   tgl_pinjam?: DateTimeNullableFilter | DateTime | Null,
+?   lama?: IntNullableFilter | Int | Null,
+?   tgl_tempo?: DateTimeNullableFilter | DateTime | Null
+  }
+}
+
+Unknown argument `account`. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.kredit.findUnique()` invocation baris Invalid `prisma.kredit.findUnique()` invocation
+2-4-2026, 10:14:13 AM : (500) [
+Invalid `prisma.kredit.findUnique()` invocation:
+
+{
+  where: {
+    account: "0101000000000012345",
+    ~~~~~~~
+?   kredit_id?: Int,
+?   AND?: kreditWhereInput | kreditWhereInput[],
+?   OR?: kreditWhereInput[],
+?   NOT?: kreditWhereInput | kreditWhereInput[],
+?   rekening?: StringNullableFilter | String | Null,
+?   nama?: StringNullableFilter | String | Null,
+?   nilai?: DecimalNullableFilter | Decimal | Null,
+?   bunga?: DecimalNullableFilter | Decimal | Null,
+?   tgl_pinjam?: DateTimeNullableFilter | DateTime | Null,
+?   lama?: IntNullableFilter | Int | Null,
+?   tgl_tempo?: DateTimeNullableFilter | DateTime | Null
+  }
+}
+
+Unknown argument `account`. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.kredit.findUnique()` invocation baris Invalid `prisma.kredit.findUnique()` invocation
+2-4-2026, 10:14:50 AM : (500) [
+Invalid `prisma.kredit.findMany()` invocation:
+
+{
+  where: {
+    account: "0101000000000012345",
+    ~~~~~~~
+?   AND?: kreditWhereInput | kreditWhereInput[],
+?   OR?: kreditWhereInput[],
+?   NOT?: kreditWhereInput | kreditWhereInput[],
+?   kredit_id?: IntFilter | Int,
+?   rekening?: StringNullableFilter | String | Null,
+?   nama?: StringNullableFilter | String | Null,
+?   nilai?: DecimalNullableFilter | Decimal | Null,
+?   bunga?: DecimalNullableFilter | Decimal | Null,
+?   tgl_pinjam?: DateTimeNullableFilter | DateTime | Null,
+?   lama?: IntNullableFilter | Int | Null,
+?   tgl_tempo?: DateTimeNullableFilter | DateTime | Null
+  }
+}
+
+Unknown argument `account`. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.kredit.findMany()` invocation baris Invalid `prisma.kredit.findMany()` invocation
+2-4-2026, 10:15:35 AM : (500) [
+Invalid `prisma.kredit.findMany()` invocation:
+
+{
+  where: {
+    account: "0101000000000012345",
+    ~~~~~~~
+?   AND?: kreditWhereInput | kreditWhereInput[],
+?   OR?: kreditWhereInput[],
+?   NOT?: kreditWhereInput | kreditWhereInput[],
+?   kredit_id?: IntFilter | Int,
+?   rekening?: StringNullableFilter | String | Null,
+?   nama?: StringNullableFilter | String | Null,
+?   nilai?: DecimalNullableFilter | Decimal | Null,
+?   bunga?: DecimalNullableFilter | Decimal | Null,
+?   tgl_pinjam?: DateTimeNullableFilter | DateTime | Null,
+?   lama?: IntNullableFilter | Int | Null,
+?   tgl_tempo?: DateTimeNullableFilter | DateTime | Null
+  }
+}
+
+Unknown argument `account`. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.kredit.findMany()` invocation baris Invalid `prisma.kredit.findMany()` invocation
+2-4-2026, 10:16:39 AM : (500) [
+Invalid `prisma.log_request.update()` invocation:
+
+{
+  where: {
+    request_id: undefined,
+?   AND?: log_requestWhereInput | log_requestWhereInput[],
+?   OR?: log_requestWhereInput[],
+?   NOT?: log_requestWhereInput | log_requestWhereInput[],
+?   ip_address?: StringNullableFilter | String | Null,
+?   url?: StringNullableFilter | String | Null,
+?   base_url?: StringNullableFilter | String | Null,
+?   method?: StringNullableFilter | String | Null,
+?   headers?: JsonNullableFilter,
+?   body_request?: JsonNullableFilter,
+?   date_request?: DateTimeNullableFilter | DateTime | Null,
+?   date_respon?: DateTimeNullableFilter | DateTime | Null,
+?   status?: IntNullableFilter | Int | Null,
+?   body_respon?: JsonNullableFilter
+  },
+  data: {
+    status: 200,
+    body_respon: {
+      statusCode: "00",
+      message: "Data ditemukan",
+      data: {
+        nama: "BUDI"
+      }
+    },
+    date_respon: new Date("2026-02-04T03:16:39.657Z")
+  }
+}
+
+Argument `where` of type log_requestWhereUniqueInput needs at least one of `request_id` arguments. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.log_request.update()` invocation baris Invalid `prisma.log_request.update()` invocation
+2-4-2026, 10:17:26 AM : (500) [
+Invalid `prisma.log_request.update()` invocation:
+
+{
+  where: {
+    request_id: undefined,
+?   AND?: log_requestWhereInput | log_requestWhereInput[],
+?   OR?: log_requestWhereInput[],
+?   NOT?: log_requestWhereInput | log_requestWhereInput[],
+?   ip_address?: StringNullableFilter | String | Null,
+?   url?: StringNullableFilter | String | Null,
+?   base_url?: StringNullableFilter | String | Null,
+?   method?: StringNullableFilter | String | Null,
+?   headers?: JsonNullableFilter,
+?   body_request?: JsonNullableFilter,
+?   date_request?: DateTimeNullableFilter | DateTime | Null,
+?   date_respon?: DateTimeNullableFilter | DateTime | Null,
+?   status?: IntNullableFilter | Int | Null,
+?   body_respon?: JsonNullableFilter
+  },
+  data: {
+    status: 200,
+    body_respon: {
+      statusCode: "00",
+      message: "Data ditemukan",
+      data: {
+        nama: "BUDI"
+      }
+    },
+    date_respon: new Date("2026-02-04T03:17:26.943Z")
+  }
+}
+
+Argument `where` of type log_requestWhereUniqueInput needs at least one of `request_id` arguments. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.log_request.update()` invocation baris Invalid `prisma.log_request.update()` invocation
+2-4-2026, 10:17:57 AM : (500) [
+Invalid `prisma.log_request.update()` invocation:
+
+{
+  where: {
+    request_id: undefined,
+?   AND?: log_requestWhereInput | log_requestWhereInput[],
+?   OR?: log_requestWhereInput[],
+?   NOT?: log_requestWhereInput | log_requestWhereInput[],
+?   ip_address?: StringNullableFilter | String | Null,
+?   url?: StringNullableFilter | String | Null,
+?   base_url?: StringNullableFilter | String | Null,
+?   method?: StringNullableFilter | String | Null,
+?   headers?: JsonNullableFilter,
+?   body_request?: JsonNullableFilter,
+?   date_request?: DateTimeNullableFilter | DateTime | Null,
+?   date_respon?: DateTimeNullableFilter | DateTime | Null,
+?   status?: IntNullableFilter | Int | Null,
+?   body_respon?: JsonNullableFilter
+  },
+  data: {
+    status: 200,
+    body_respon: {
+      statusCode: "00",
+      message: "Data ditemukan",
+      data: {
+        nama: "BUDI"
+      }
+    },
+    date_respon: new Date("2026-02-04T03:17:57.740Z")
+  }
+}
+
+Argument `where` of type log_requestWhereUniqueInput needs at least one of `request_id` arguments. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.log_request.update()` invocation baris Invalid `prisma.log_request.update()` invocation
+2-4-2026, 10:18:31 AM : (500) [
+Invalid `prisma.log_request.update()` invocation:
+
+{
+  where: {
+    request_id: undefined,
+?   AND?: log_requestWhereInput | log_requestWhereInput[],
+?   OR?: log_requestWhereInput[],
+?   NOT?: log_requestWhereInput | log_requestWhereInput[],
+?   ip_address?: StringNullableFilter | String | Null,
+?   url?: StringNullableFilter | String | Null,
+?   base_url?: StringNullableFilter | String | Null,
+?   method?: StringNullableFilter | String | Null,
+?   headers?: JsonNullableFilter,
+?   body_request?: JsonNullableFilter,
+?   date_request?: DateTimeNullableFilter | DateTime | Null,
+?   date_respon?: DateTimeNullableFilter | DateTime | Null,
+?   status?: IntNullableFilter | Int | Null,
+?   body_respon?: JsonNullableFilter
+  },
+  data: {
+    status: 200,
+    body_respon: {
+      statusCode: "00",
+      message: "Data ditemukan",
+      data: {
+        nama: "BUDI"
+      }
+    },
+    date_respon: new Date("2026-02-04T03:18:31.637Z")
+  }
+}
+
+Argument `where` of type log_requestWhereUniqueInput needs at least one of `request_id` arguments. Available options are marked with ?.] pada backend \undefined\Invalid `prisma.log_request.update()` invocation baris Invalid `prisma.log_request.update()` invocation
+2-4-2026, 10:57:32 AM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `08P01`. Message: `pesan terikat menyediakan 1 parameter, tapi 'prepared statement' «  » butuh 0`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-4-2026, 10:57:48 AM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `08P01`. Message: `pesan terikat menyediakan 1 parameter, tapi 'prepared statement' «  » butuh 0`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-4-2026, 10:58:17 AM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `08P01`. Message: `pesan terikat menyediakan 1 parameter, tapi 'prepared statement' «  » butuh 0`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-4-2026, 10:58:35 AM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `08P01`. Message: `pesan terikat menyediakan 1 parameter, tapi 'prepared statement' «  » butuh 0`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-4-2026, 10:59:03 AM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `08P01`. Message: `pesan terikat menyediakan 1 parameter, tapi 'prepared statement' «  » butuh 0`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-4-2026, 11:07:47 AM : (500) [angsur is not defined] pada backend \model\debitur.js baris 49
+2-4-2026, 11:08:12 AM : (500) [angsur is not defined] pada backend \model\debitur.js baris 49
+2-4-2026, 11:08:46 AM : (500) [angsur is not defined] pada backend \model\debitur.js baris 49
+2-4-2026, 11:09:15 AM : (500) [bayar_bunga is not defined] pada backend \model\debitur.js baris 62
+2-4-2026, 11:38:01 AM : (500) [jadwalHitung is not iterable] pada backend \model\debitur.js baris 91
+2-4-2026, 11:38:43 AM : (500) [jadwalHitung is not iterable] pada backend \model\debitur.js baris 91
+2-4-2026, 11:39:45 AM : (500) [nunggak is not defined] pada backend \model\debitur.js baris 91
+2-4-2026, 11:52:48 AM : (500) [xTunggakanBunga is not defined] pada backend \model\debitur.js baris 25
