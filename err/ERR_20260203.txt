@@ -61,3 +61,4 @@ Invalid `prisma.$queryRaw()` invocation:
 
 Raw query failed. Code: `42P18`. Message: `tidak dapat menentukan tipe data dari parameter $1`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
 2-3-2026, 10:29:59 AM : (500) [Cannot read properties of undefined (reading 'valid_until')] pada backend \model\users.js baris 40
+2-3-2026, 10:33:01 AM : (500) invalid auth
