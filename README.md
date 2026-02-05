@@ -1,7 +1,9 @@
 #Ini adalah fun project yang dan bukan untuk keperluan komersial
 
 <h3>Aplikasi yang digunakan : </h3>
-  <li>Backend (SAYA)</li> 
+  <li>Backend (SAYA)
+      <li>Node JS</li>
+  </li> 
         <li>NodeJS</li>
         <li>Express</li>
   <li>frontend</li>
