@@ -1,5 +1,5 @@
 Ini adalah fun project yang dan bukan untuk keperluan komersial<br>
-#ISCLAIMER : Repository ini saya publish untuk keperluan portfolio dan tidak ada data sensitif pada database
+DISCLAIMER : Repository ini saya publish untuk keperluan portfolio dan tidak ada data sensitif pada database
 
 <h4>PROJECT MASIH DALAM TAHAP DEVELOPMENT, BISA JADI ADA DOKUMENTASI ATAU FITUR YANG BERUBAH</h4>
 
