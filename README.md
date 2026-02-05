@@ -33,5 +33,5 @@ DISCLAIMER : Repository ini saya publish untuk keperluan portfolio dan tidak ada
 4. historis transaksi<br>
 5. laporan log<br>
 
-kalian juga bisa coba request ke backend ini dengan cek dokumentasi berikut :<br>
+<h4>kalian juga bisa coba request ke backend ini dengan cek dokumentasi berikut :</h4>
 https://docs.google.com/document/d/1rTE0sKET5PybNNknxXiOGu69bwEh-Igx/edit?usp=sharing&ouid=101033213620860096080&rtpof=true&sd=true
