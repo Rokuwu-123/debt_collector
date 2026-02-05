@@ -13,7 +13,7 @@ DISCLAIMER : Repository ini saya publish untuk keperluan portfolio dan tidak ada
       <li>Postgres 16 (data dummy)</li>
 <br>
 
-<h3>Tools</h3>h3>
+<h3>Tools</h3>
       <li>VSCode</li>
       <li>PG Admin</li>
 <br>
