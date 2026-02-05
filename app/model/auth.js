@@ -53,8 +53,6 @@ export const tokenCheck = async(token,url, username)=>{
             }
         })
 
-        console.log(userID)
-
         const tokenList = await tx.token.findUnique({
             where : {
                 token : token,

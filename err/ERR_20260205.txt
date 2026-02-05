@@ -1,0 +1,8 @@
+2-5-2026, 11:20:24 AM : (500) [Cannot read properties of undefined (reading 'denda')] pada backend \controller\debitur.js baris 29
+2-5-2026, 11:21:00 AM : (400) Invalid payload
+2-5-2026, 11:22:07 AM : (400) Invalid payload
+2-5-2026, 11:22:49 AM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42601`. Message: `'sintaks error' pada atau didekat « : »`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation

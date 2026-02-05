@@ -15,6 +15,8 @@ model bayar {
   denda       Decimal?  @default(0) @db.Decimal(16, 2)
   tanggal     DateTime? @db.Timestamp(6)
   user_insert Int?      @default(0)
+  bukti       String?   @default("") @db.VarChar(100)
+  reference   String?   @default("")
 }
 
 model divisi {
@@ -39,6 +41,7 @@ model kredit {
   tgl_pinjam DateTime? @db.Date
   lama       Int?      @default(0)
   tgl_tempo  DateTime? @db.Date
+  tgl_lunas  DateTime? @db.Date
 }
 
 model log_request {

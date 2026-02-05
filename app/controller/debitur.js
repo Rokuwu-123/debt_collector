@@ -1,6 +1,6 @@
 import errHandler from "../libraries/errHandler.js"
 import { responLog } from "../model/historis_models.js"
-import { debitur } from "../model/debitur.js"
+import { debitur, transaksi } from "../model/debitur.js"
 
 export const dataDebitur = async(req,res)=>{
     try {
@@ -16,6 +16,32 @@ export const dataDebitur = async(req,res)=>{
             message : 'Data ditemukan',
             data : await debitur(req.query.account)
 
+        }, req.requestID)
+
+    } catch (error) {
+        await errHandler(res,error,req.requestID)
+    }
+}
+
+export const payment = async(req,res)=>{
+    try {
+        console.log(req.body)
+        if(!req.body.account && !req.body.pokok && !req.body.bunga && !req.body.denda) throw {
+            status : 400,
+            statusCode : "03",
+            message : "Invalid payload"
+        }
+
+        if (req.body.pokok + req.body.bunga + req.body.denda <= 0) throw {
+            status : 400,
+            statusCode : "03",
+            message : "Invalid nominal transaksi"
+        }
+
+        await responLog(res,200,{
+            statusCode : '00',
+            message : 'Transaksi berhasil',
+            data : await transaksi(req.body, req.headers['x-reference'])
         }, req.requestID)
 
     } catch (error) {

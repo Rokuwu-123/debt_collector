@@ -11,6 +11,12 @@ export const debitur = async(account)=>{
             }
         })
 
+        if (data[0].tgl_lunas !== null) throw {
+            status : 400,
+            statusCode : '05',
+            message : 'Rekening sudah lunas'
+        }
+
         const bulanIni = await tx.$queryRaw`select pokok, bunga, to_char(tanggal,'DD-MM-YYYY') tanggal from 
         jadwal where to_char(tanggal,'YYYYMM') = to_char(current_date,'YYYYMM') and rekening = ${account}`
 
@@ -35,6 +41,70 @@ export const debitur = async(account)=>{
 
     return returnData
 
+}
+
+export const transaksi = async(payment,refno,username)=>{
+
+    let returnValue
+    await prismaDB.$transaction(async (tx)=>{
+
+        const userID = await tx.users.findMany({
+            where : {
+                username : username
+            }, 
+            select : {
+                users_id : true
+            }
+        })
+
+        if (!userID.length) throw {
+            status : 403,
+            statusCode : '01',
+            message : 'Username tidak ditemukan'
+        }
+
+        const dataKredit = await tx.kredit.findMany({
+            where : {
+                rekening : payment.account
+            },
+            select : {
+                tgl_lunas : true
+            }
+        })
+
+        if (dataKredit[0].tgl_lunas !== null) throw {
+            status : 400,
+            statusCode : '05',
+            message : 'Rekening sudah lunas'
+        }
+
+        const bukti = await tx.$queryRaw`select bukti from bayar where tanggal::date = current_date order by bukti desc limit 1 `
+        
+        let buktiBaru = 'ANG00001'
+        if (bukti.length) {
+            let urutBukti = bukti[0].bukti.substr(3,5)
+            let urutBuktiBaru = Number(urutBukti) + 1
+            buktiBaru ='ANG' + String(urutBuktiBaru).padStart(5,'0')
+        }
+
+        await tx.bayar.create({
+            data : {
+                rekening : payment.account,
+                pokok : payment.pokok,
+                bunga : payment.bunga,
+                bukti : buktiBaru,
+                reference : refno,
+                user_insert : userID[0].users_id
+            }
+        })
+
+        returnValue = {
+            refno,
+            bukti : buktiBaru
+        }
+    })
+
+    return returnValue
 }
 
 async function hitungJadwal(rekening) {
