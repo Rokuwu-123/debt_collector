@@ -4,3 +4,19 @@ Invalid `prisma.$queryRaw()` invocation:
 
 
 Raw query failed. Code: `22008`. Message: `nilai field date/time melebihi jangkauan : « 20260229 »`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-6-2026, 2:41:03 PM : (401) Invalid username
+2-6-2026, 2:43:56 PM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `kolom « body » tidak ada`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-6-2026, 2:44:28 PM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `kolom « tanggal » tidak ada`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
+2-6-2026, 2:45:00 PM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `kolom « respon » tidak ada`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation

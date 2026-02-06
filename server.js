@@ -5,6 +5,7 @@ import rateLimit from 'express-rate-limit'
 import auth from './app/auth/auth.js'
 import users from './app/routes/users.js'
 import debitur from './app/routes/debitur.js'
+import log from './app/routes/log.js'
 
 const app = express()
 app.disable("x-powered-by")
@@ -35,6 +36,7 @@ app.get("/", (req, res) => {
 app.use(auth)
 app.use(users)
 app.use(debitur)
+app.use(log)
 
 const server_http = http.createServer(app);
 server_http.listen(port, host, () => {

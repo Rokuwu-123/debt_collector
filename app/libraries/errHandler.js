@@ -37,8 +37,8 @@ export default async (respon, error, requestID) => {
 
         if (requestID) {
             await responLog(respon, sendStatus, {
-                "responseCode": errKode,
-                description: message
+                "statusCode": errKode,
+                "message": message
             }, requestID)
 
         } else {
