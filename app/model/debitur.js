@@ -76,7 +76,7 @@ export const transaksi = async(payment,refno,username)=>{
             status : 400,
             statusCode : '05',
             message : 'Rekening sudah lunas'
-        }
+        }  
 
         const bukti = await tx.$queryRaw`select bukti from bayar where tanggal::date = current_date order by bukti desc limit 1 `
         
@@ -94,7 +94,8 @@ export const transaksi = async(payment,refno,username)=>{
                 bunga : payment.bunga,
                 bukti : buktiBaru,
                 reference : refno,
-                user_insert : userID[0].users_id
+                user_insert : userID[0].users_id,
+                tanggal : new Date()
             }
         })
 
@@ -102,6 +103,35 @@ export const transaksi = async(payment,refno,username)=>{
             refno,
             bukti : buktiBaru
         }
+    })
+
+    return returnValue
+}
+
+export const riwayatTransaksi = async(data, username)=>{
+
+    let returnValue = []
+    await prismaDB.$transaction(async (tx)=>{
+        const userID = await tx.users.findMany({
+            where : {
+                username : username
+            },
+            select : {
+                users_id : true
+            }
+        })
+
+        if (!userID.length) throw {
+            status : 403,
+            statusCode : '02',
+            message : "Username tidak ditemukan"
+        }
+
+        const dataRiwayat = await tx.$queryRaw`select to_char(tanggal,'DD-MM-YYYY HH24:mm') tanggal, 
+        rekening account, pokok+bunga nilai, bukti, reference from bayar where tanggal::date between ${data.tanggalAwal}
+        and ${data.tanggalAkhir}`
+
+        returnValue = dataRiwayat
     })
 
     return returnValue
@@ -159,6 +189,8 @@ async function hitungJadwal(rekening) {
     return jadwal
 
 }
+
+
 
 async function hitungTunggakan(rekening) {
     const jadwal = await hitungJadwal(rekening)

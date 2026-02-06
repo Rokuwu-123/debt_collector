@@ -1,0 +1,6 @@
+2-6-2026, 2:05:13 PM : (401) Invalid username
+2-6-2026, 2:05:32 PM : (500) [
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `22008`. Message: `nilai field date/time melebihi jangkauan : « 20260229 »`] pada backend \undefined\Invalid `prisma.$queryRaw()` invocation baris Invalid `prisma.$queryRaw()` invocation
