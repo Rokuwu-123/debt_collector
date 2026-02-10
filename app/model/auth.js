@@ -44,7 +44,7 @@ export const tokenCheck = async(token,url, username)=>{
 
     let returnValue = true
     await prismaDB.$transaction(async (tx)=>{
-        const userID = await tx.users.findUnique({
+        const userID = await tx.users.findMany({
             where : {
                 username : username
             },
@@ -53,17 +53,17 @@ export const tokenCheck = async(token,url, username)=>{
             }
         })
 
-        const tokenList = await tx.token.findUnique({
+        const tokenList = await tx.token.findMany({
             where : {
                 token : token,
-                user_id : userID.users_id,
+                user_id : userID[0].users_id,
                 valid_until : {
                     gt : new Date()
                 }
             }
         })
 
-        if (!tokenList) returnValue = false
+        if (!tokenList.length) returnValue = false
     })
 
     return returnValue
